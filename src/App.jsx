@@ -7,13 +7,13 @@ import {Draggable} from './Draggable';
 export default function App() {
   const [isDropped, setIsDropped] = useState(false);
   const draggableMarkup = (
-    <Draggable>💌</Draggable>
+    <Draggable>🛵💌</Draggable>
   );
   
   return (
-    <div className='flex justify-center items-center w-screen'>
+    <section className='flex justify-center items-center w-screen' >
 
-    <div className='bg-yellow-300 border-4 mt-40 flex justify-center items-center'>
+    <div className='bg-yellow-300 border-4 mt-40 flex justify-center items-center flex-row-reverse p-6'>
 
     <DndContext onDragEnd={handleDragEnd} >
       {!isDropped ? draggableMarkup : null}
@@ -22,7 +22,7 @@ export default function App() {
       </Droppable>
     </DndContext>
     </div>
-    </div>
+    </section>
   );
   
   function handleDragEnd(event) {
