@@ -7,7 +7,7 @@ import {Draggable} from './Draggable';
 export default function App() {
   const [isDropped, setIsDropped] = useState(false);
   const draggableMarkup = (
-    <Draggable>❤️</Draggable>
+    <Draggable>💌</Draggable>
   );
   
   return (
@@ -15,7 +15,7 @@ export default function App() {
 
     <div className='bg-yellow-300 border-4 mt-40 flex justify-center items-center'>
 
-    <DndContext onDragEnd={handleDragEnd}>
+    <DndContext onDragEnd={handleDragEnd} >
       {!isDropped ? draggableMarkup : null}
       <Droppable>
         {isDropped ?  <Draggable>🫰🏼 EAAA 🤣</Draggable> : <span className='font-bold text-xl '>Drop here</span>}
